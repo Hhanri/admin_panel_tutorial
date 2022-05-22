@@ -15,13 +15,18 @@ class ResponsivenessWidget extends StatelessWidget {
     required this.smallScreenWidget,
   }) : super(key: key);
 
+  static isSmallScreen(BuildContext context) {
+    return MediaQuery.of(context).size.width < mediumScreenSize;
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         bool isLargeScreen = constraints.minWidth >= largeScreenSize;
-        bool isSmallScreen = constraints.maxWidth < smallScreenSize;
-        bool isMediumScreen = constraints.maxWidth >= smallScreenSize && constraints.maxWidth < mediumScreenSize;
+        bool isSmallScreen = constraints.maxWidth < mediumScreenSize;
+        bool isMediumScreen = constraints.maxWidth >= mediumScreenSize && constraints.maxWidth < largeScreenSize;
         if (isLargeScreen) {
           return largeScreenWidget;
         } else if (isMediumScreen) {
