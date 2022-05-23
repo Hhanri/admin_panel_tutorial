@@ -1,6 +1,7 @@
 import 'package:admin_panel_tutorial/helpers/responsiveness_widget.dart';
 import 'package:admin_panel_tutorial/widgets/app_bar_widget.dart';
 import 'package:admin_panel_tutorial/widgets/large_screen_widget.dart';
+import 'package:admin_panel_tutorial/widgets/side_menu_widget.dart';
 import 'package:admin_panel_tutorial/widgets/small_screen_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,9 @@ class SiteLayout extends StatelessWidget {
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
       key: scaffoldKey,
-      drawer: const Drawer(),
+      drawer: const Drawer(
+        child: SideMenuWidget(),
+      ),
       appBar: topNavigationBar(context: context, key: scaffoldKey),
       body: const ResponsivenessWidget(
         largeScreenWidget: LargeScreenWidget(),

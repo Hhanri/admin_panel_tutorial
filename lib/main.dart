@@ -1,11 +1,11 @@
-import 'package:admin_panel_tutorial/constants/controllers.dart';
 import 'package:admin_panel_tutorial/constants/theme.dart';
+import 'package:admin_panel_tutorial/controllers/menu_controller.dart';
 import 'package:admin_panel_tutorial/layout.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void main() {
-  Get.put(menuController);
+  Get.put(MenuController());
   runApp(const MyApp());
 }
 

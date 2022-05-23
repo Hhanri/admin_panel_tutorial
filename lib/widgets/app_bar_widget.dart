@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 AppBar topNavigationBar({required BuildContext context, required GlobalKey<ScaffoldState> key}) =>
     AppBar(
       iconTheme: IconThemeData(color: dark),
-      backgroundColor: Colors.transparent,
+      backgroundColor: light,
       leading: !ResponsivenessWidget.isSmallScreen(context)
       ? Container(
         padding: const EdgeInsets.only(left: 14),

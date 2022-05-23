@@ -1,3 +1,4 @@
+import 'package:admin_panel_tutorial/widgets/side_menu_widget.dart';
 import 'package:flutter/material.dart';
 
 class LargeScreenWidget extends StatelessWidget {
@@ -6,10 +7,12 @@ class LargeScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Expanded(
+        const Expanded(
           flex: 1,
-          child: Container()
+          child: SideMenuWidget()
         ),
         Expanded(
           flex: 5,
