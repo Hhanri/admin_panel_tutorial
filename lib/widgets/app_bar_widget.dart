@@ -10,14 +10,19 @@ AppBar topNavigationBar({required BuildContext context, required GlobalKey<Scaff
       backgroundColor: Colors.transparent,
       leading: !ResponsivenessWidget.isSmallScreen(context)
       ? const DashBoardLogoWidget()
-      : IconButton(
-        onPressed: () {
-          key.currentState!.openDrawer();
-        },
-        icon: const Icon(Icons.menu)
+      : Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          IconButton(
+            onPressed: () {
+              key.currentState!.openDrawer();
+            },
+            icon: const Icon(Icons.menu)
+          ),
+        ],
       ),
       title: Visibility(
-        visible: !ResponsivenessWidget.isSmallScreen(context),
+        visible: ResponsivenessWidget.isSmallScreen(context),
         child: CustomTextWidget(
           text: "Dashboard",
           color: lightGrey,
