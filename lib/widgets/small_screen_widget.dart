@@ -1,3 +1,4 @@
+import 'package:admin_panel_tutorial/helpers/local_navigator.dart';
 import 'package:flutter/material.dart';
 
 class SmallScreenWidget extends StatelessWidget {
@@ -5,8 +6,6 @@ class SmallScreenWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      constraints: const BoxConstraints.expand(),
-    );
+    return localNavigator();
   }
 }

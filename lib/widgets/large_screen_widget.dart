@@ -1,3 +1,4 @@
+import 'package:admin_panel_tutorial/helpers/local_navigator.dart';
 import 'package:admin_panel_tutorial/widgets/side_menu_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class LargeScreenWidget extends StatelessWidget {
         ),
         Expanded(
           flex: 5,
-          child: Container(),
+          child: localNavigator(),
         )
       ],
     );
