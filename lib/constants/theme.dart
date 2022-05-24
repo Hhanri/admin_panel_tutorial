@@ -5,7 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 ThemeData theme({required BuildContext context}) => ThemeData(
   scaffoldBackgroundColor: light,
   appBarTheme: const AppBarTheme(
-    backgroundColor: Colors.white,
     elevation: 0),
   textTheme: GoogleFonts.mulishTextTheme(
     Theme.of(context).textTheme

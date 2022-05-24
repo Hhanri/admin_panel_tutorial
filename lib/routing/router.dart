@@ -1,3 +1,4 @@
+import 'package:admin_panel_tutorial/constants/style.dart';
 import 'package:admin_panel_tutorial/pages/authenticatiom/authentication.dart';
 import 'package:admin_panel_tutorial/pages/clients/clients.dart';
 import 'package:admin_panel_tutorial/pages/drivers/drivers.dart';
@@ -16,5 +17,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
 }
 
 PageRoute _getPageRoute(Widget child) {
-  return MaterialPageRoute(builder: (BuildContext context) => child);
+  return MaterialPageRoute(
+    builder: (BuildContext context) => Container(color: light, padding: const EdgeInsets.all(10), child: child)
+  );
 }

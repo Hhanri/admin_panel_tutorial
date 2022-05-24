@@ -8,7 +8,7 @@ class OverviewCardsLargeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width / 64;
-    List<Widget> cards = [];
+    List<Widget> cards = [SizedBox(width: width)];
     OverviewCardDataModel.mockData.forEach((item) {
       cards.add(InfoCardWidget(title: item.title, value: item.value, topColor: item.color, isActive: item.isActive, onTap: () {}));
       cards.add(SizedBox(width: width));

@@ -12,7 +12,7 @@ class PageTitleWidget extends StatelessWidget {
     return Obx(() => Row(
       children: [
         Container(
-          margin: EdgeInsets.only(top: ResponsivenessWidget.isSmallScreen(context) ? 56 : 6),
+          margin: EdgeInsets.only(top: ResponsivenessWidget.isSmallScreen(context) ? 56 : 6, left: 20),
           child: CustomTextWidget(
             text: menuController.activeItem.value,
             size: 24,

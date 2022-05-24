@@ -22,47 +22,56 @@ class InfoCardWidget extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Container(
-          height: 136,
           alignment: Alignment.center,
+          height: 110,
           decoration: BoxDecoration(
             color: Colors.white,
             boxShadow:[
               BoxShadow(
                 offset: const Offset(0, 0),
-                color: lightGrey.withOpacity(0.1),
+                color: lightGrey.withOpacity(0.7),
                 blurRadius: 12
               )
             ],
             borderRadius: BorderRadius.circular(8)
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Row(
-                children: [
-                  Expanded(child: Container(color: topColor, height: 5,)),
-                ],
-              ),
-              RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
+              Expanded(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    TextSpan(
-                      text: "$title\n",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: isActive ? active : lightGrey
-                      )
-                    ),
-                    TextSpan(
-                      text: value,
-                      style: TextStyle(
-                        fontSize: 40,
-                        color: isActive ? active : lightGrey
-                      )
-                    )
-                  ]
-                )
+                    Expanded(child: Container(color: topColor, height: 5)),
+                  ],
+                ),
               ),
+              const Spacer(),
+              Expanded(
+                flex: 4,
+                child: RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "$title\n",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: isActive ? active : lightGrey
+                        )
+                      ),
+                      TextSpan(
+                        text: value,
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: isActive ? active : lightGrey
+                        )
+                      )
+                    ]
+                  )
+                ),
+              ),
+              const Spacer()
             ],
           ),
         ),
