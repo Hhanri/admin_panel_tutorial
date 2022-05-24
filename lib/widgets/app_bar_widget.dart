@@ -1,6 +1,7 @@
 import 'package:admin_panel_tutorial/constants/style.dart';
 import 'package:admin_panel_tutorial/helpers/responsiveness_widget.dart';
 import 'package:admin_panel_tutorial/widgets/custom_text_widget.dart';
+import 'package:admin_panel_tutorial/widgets/dashboard_logo_widget.dart';
 import 'package:flutter/material.dart';
 
 AppBar topNavigationBar({required BuildContext context, required GlobalKey<ScaffoldState> key}) =>
@@ -8,10 +9,7 @@ AppBar topNavigationBar({required BuildContext context, required GlobalKey<Scaff
       iconTheme: IconThemeData(color: dark),
       backgroundColor: light,
       leading: !ResponsivenessWidget.isSmallScreen(context)
-      ? Container(
-        padding: const EdgeInsets.only(left: 14),
-        child: Image.asset("assets/logo/logo.png", width: 20,),
-      )
+      ? const DashBoardLogoWidget()
       : IconButton(
         onPressed: () {
           key.currentState!.openDrawer();
@@ -19,6 +17,7 @@ AppBar topNavigationBar({required BuildContext context, required GlobalKey<Scaff
         icon: const Icon(Icons.menu)
       ),
       title: Visibility(
+        visible: !ResponsivenessWidget.isSmallScreen(context),
         child: CustomTextWidget(
           text: "Dashboard",
           color: lightGrey,
