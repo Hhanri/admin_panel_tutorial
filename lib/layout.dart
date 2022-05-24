@@ -11,6 +11,7 @@ class SiteLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
+      extendBodyBehindAppBar: true,
       key: scaffoldKey,
       drawer: const Drawer(
         child: SideMenuWidget(),

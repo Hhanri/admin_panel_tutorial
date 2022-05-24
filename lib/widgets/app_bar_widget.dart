@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 AppBar topNavigationBar({required BuildContext context, required GlobalKey<ScaffoldState> key}) =>
     AppBar(
       iconTheme: IconThemeData(color: dark),
-      backgroundColor: light,
+      backgroundColor: Colors.transparent,
       leading: !ResponsivenessWidget.isSmallScreen(context)
       ? const DashBoardLogoWidget()
       : IconButton(

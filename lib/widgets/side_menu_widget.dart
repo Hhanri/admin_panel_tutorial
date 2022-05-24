@@ -43,10 +43,10 @@ class SideMenuWidget extends StatelessWidget {
                     SizedBox(width: width / 48),
                   ],
                 ),
-                const SizedBox(height: 40),
-                Divider(color: lightGrey.withOpacity(0.1)),
               ],
             ),
+            const SizedBox(height: 40),
+            Divider(color: lightGrey.withOpacity(0.1)),
             Column(
               children: sideMenuItems.map((itemName) {
                 return SideMenuItem(

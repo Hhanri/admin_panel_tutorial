@@ -1,4 +1,4 @@
-import 'package:admin_panel_tutorial/widgets/custom_text_widget.dart';
+import 'package:admin_panel_tutorial/widgets/page_title_widget.dart';
 import 'package:flutter/material.dart';
 
 class DriversPage extends StatelessWidget {
@@ -6,13 +6,10 @@ class DriversPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: CustomTextWidget(
-        text: "Drivers",
-        fontWeight: FontWeight.normal,
-        size: 16,
-        color: Colors.black,
-      ),
+    return Column(
+      children: const [
+        PageTitleWidget()
+      ],
     );
   }
 }
