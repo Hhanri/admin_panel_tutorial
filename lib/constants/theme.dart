@@ -19,3 +19,16 @@ ThemeData theme({required BuildContext context}) => ThemeData(
   ),
   primaryColor: Colors.blue
 );
+
+BoxDecoration containerBoxDecoration = BoxDecoration(
+  color: Colors.white,
+  borderRadius: BorderRadius.circular(8),
+  boxShadow: [
+    BoxShadow(
+      offset: const Offset(0, 6),
+      color: lightGrey.withOpacity(0.1),
+      blurRadius: 12
+    )
+  ],
+  border: Border.all(color: lightGrey, width: 0.5)
+);

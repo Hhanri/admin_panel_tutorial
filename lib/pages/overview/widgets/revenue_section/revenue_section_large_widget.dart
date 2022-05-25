@@ -1,4 +1,5 @@
 import 'package:admin_panel_tutorial/constants/style.dart';
+import 'package:admin_panel_tutorial/constants/theme.dart';
 import 'package:admin_panel_tutorial/pages/overview/widgets/revenue_section/chart_widget.dart';
 import 'package:admin_panel_tutorial/pages/overview/widgets/revenue_section/revenue_info_cards_widget.dart';
 import 'package:admin_panel_tutorial/widgets/custom_text_widget.dart';
@@ -15,18 +16,7 @@ class RevenueSectionLargeWidget extends StatelessWidget {
     return Container(
       padding: padding,
       margin: margin,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          BoxShadow(
-            offset: const Offset(0, 6),
-            color: lightGrey.withOpacity(0.1),
-            blurRadius: 12
-          )
-        ],
-        border: Border.all(color: lightGrey, width: 0.5),
-      ),
+      decoration: containerBoxDecoration,
       child: Row(
         children: [
           Expanded(

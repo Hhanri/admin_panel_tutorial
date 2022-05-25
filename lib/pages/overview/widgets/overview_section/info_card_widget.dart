@@ -1,4 +1,5 @@
 import 'package:admin_panel_tutorial/constants/style.dart';
+import 'package:admin_panel_tutorial/constants/theme.dart';
 import 'package:flutter/material.dart';
 
 class InfoCardWidget extends StatelessWidget {
@@ -24,17 +25,7 @@ class InfoCardWidget extends StatelessWidget {
         child: Container(
           alignment: Alignment.center,
           height: 110,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            boxShadow:[
-              BoxShadow(
-                offset: const Offset(0, 0),
-                color: lightGrey.withOpacity(0.7),
-                blurRadius: 12
-              )
-            ],
-            borderRadius: BorderRadius.circular(8)
-          ),
+          decoration: containerBoxDecoration,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [

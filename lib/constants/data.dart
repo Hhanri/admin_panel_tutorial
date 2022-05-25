@@ -35,3 +35,23 @@ class OverviewRevenueInfoDataModel {
     OverviewRevenueInfoDataModel(title: "25/06/2022", amount: "42"),
   ];
 }
+
+class OverviewDriverDataModel {
+  final String name;
+  final String location;
+  final double rating;
+
+  OverviewDriverDataModel({
+    required this.name,
+    required this.location,
+    required this.rating
+  });
+
+  static final List<OverviewDriverDataModel> mockData = [
+    OverviewDriverDataModel(name: "Hanri", location: "Paris", rating: 10),
+    OverviewDriverDataModel(name: "Bouba", location: "Paris", rating: 7),
+    OverviewDriverDataModel(name: "OusJames", location: "Paris", rating: 10),
+    OverviewDriverDataModel(name: "Ilies", location: "Paris", rating: 10),
+    OverviewDriverDataModel(name: "Houssem", location: "Paris", rating: 3.5),
+  ];
+}
