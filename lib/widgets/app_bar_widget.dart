@@ -65,7 +65,7 @@ AppBar topNavigationBar({required BuildContext context, required GlobalKey<Scaff
               color: lightGrey,
             ),
             const SizedBox(width: 24),
-            CustomTextWidget(text: "Hanri", size: 16, color: dark, fontWeight: FontWeight.normal),
+            CustomTextWidget(text: "Hanri", color: dark),
             const SizedBox(width: 16,),
             Container(
               decoration: BoxDecoration(

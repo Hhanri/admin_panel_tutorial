@@ -17,7 +17,6 @@ class PageTitleWidget extends StatelessWidget {
             text: menuController.activeItem.value,
             size: 24,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
           ),
         )
       ],

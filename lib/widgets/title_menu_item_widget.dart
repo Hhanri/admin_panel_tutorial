@@ -19,8 +19,6 @@ class TitleMenuItemWidget extends StatelessWidget {
       ? CustomTextWidget(
           text: itemName,
           color: menuController.isHovering(itemName) ? dark : lightGrey,
-          size: 16,
-          fontWeight: FontWeight.normal,
       )
       : CustomTextWidget(
           text: itemName,

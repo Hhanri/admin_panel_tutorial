@@ -19,3 +19,19 @@ class OverviewCardDataModel {
     OverviewCardDataModel(title: "Scheduled Deliveries", value: "10", color: Colors.purple, isActive: true),
   ];
 }
+
+class OverviewRevenueInfoDataModel {
+  final String title;
+  final String amount;
+
+  OverviewRevenueInfoDataModel({
+    required this.title, required this.amount
+  });
+
+  static final List<OverviewRevenueInfoDataModel> mockData = [
+    OverviewRevenueInfoDataModel(title: "22/06/2022", amount: "28"),
+    OverviewRevenueInfoDataModel(title: "23/06/2022", amount: "35"),
+    OverviewRevenueInfoDataModel(title: "24/06/2022", amount: "31"),
+    OverviewRevenueInfoDataModel(title: "25/06/2022", amount: "42"),
+  ];
+}
