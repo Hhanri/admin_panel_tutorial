@@ -7,8 +7,8 @@ import 'package:admin_panel_tutorial/widgets/custom_text_widget.dart';
 import 'package:admin_panel_tutorial/widgets/divider_widget.dart';
 import 'package:flutter/material.dart';
 
-class RevenueSectionLargeWidget extends StatelessWidget {
-  const RevenueSectionLargeWidget({Key? key}) : super(key: key);
+class RevenueSectionSmallWidget extends StatelessWidget {
+  const RevenueSectionSmallWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +29,10 @@ class RevenueSectionLargeWidget extends StatelessWidget {
         ],
         border: Border.all(color: lightGrey, width: 0.5),
       ),
-      child: Row(
+      child: Column(
         children: [
-          Expanded(
+          SizedBox(
+            height: 260,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -44,8 +45,9 @@ class RevenueSectionLargeWidget extends StatelessWidget {
               ],
             ),
           ),
-          const VerticalDividerWidget(height: 120),
-          const Expanded(
+          const HorizontalDividerWidget(width: 120),
+          const SizedBox(
+            height: 260,
             child: RevenueInfoCardsWidget()
           )
         ],
@@ -53,3 +55,4 @@ class RevenueSectionLargeWidget extends StatelessWidget {
     );
   }
 }
+

@@ -22,7 +22,7 @@ class RevenueInfoWidget extends StatelessWidget {
               style: TextStyle(color: lightGrey, fontSize: 16)
             ),
             TextSpan(
-              text: "$amount\n\n",
+              text: "$amount\n",
               style: TextStyle(color: dark, fontSize: 24, fontWeight: FontWeight.bold)
             )
           ]
