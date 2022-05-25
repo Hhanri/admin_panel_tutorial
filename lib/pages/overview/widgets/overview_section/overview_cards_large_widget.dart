@@ -1,5 +1,5 @@
 import 'package:admin_panel_tutorial/constants/data.dart';
-import 'package:admin_panel_tutorial/pages/overview/widgets/info_card_widget.dart';
+import 'package:admin_panel_tutorial/pages/overview/widgets/overview_section/info_card_widget.dart';
 import 'package:flutter/material.dart';
 
 class OverviewCardsLargeWidget extends StatelessWidget {

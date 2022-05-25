@@ -1,5 +1,5 @@
 import 'package:admin_panel_tutorial/constants/data.dart';
-import 'package:admin_panel_tutorial/pages/overview/widgets/revenue_info_widget.dart';
+import 'package:admin_panel_tutorial/pages/overview/widgets/revenue_section/revenue_info_widget.dart';
 import 'package:flutter/material.dart';
 
 class RevenueInfoCardsWidget extends StatelessWidget {

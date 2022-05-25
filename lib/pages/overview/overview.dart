@@ -1,9 +1,9 @@
 import 'package:admin_panel_tutorial/helpers/responsiveness_widget.dart';
-import 'package:admin_panel_tutorial/pages/overview/widgets/overview_cards_large_widget.dart';
-import 'package:admin_panel_tutorial/pages/overview/widgets/overview_cards_medium_widget.dart';
+import 'package:admin_panel_tutorial/pages/overview/widgets/overview_section/overview_cards_large_widget.dart';
+import 'package:admin_panel_tutorial/pages/overview/widgets/overview_section/overview_cards_medium_widget.dart';
 import 'package:admin_panel_tutorial/pages/overview/widgets/overview_cards_small_widget.dart';
-import 'package:admin_panel_tutorial/pages/overview/widgets/revenue_section_large_widget.dart';
-import 'package:admin_panel_tutorial/pages/overview/widgets/revenue_section_small_widget.dart';
+import 'package:admin_panel_tutorial/pages/overview/widgets/revenue_section/revenue_section_large_widget.dart';
+import 'package:admin_panel_tutorial/pages/overview/widgets/revenue_section/revenue_section_small_widget.dart';
 import 'package:admin_panel_tutorial/widgets/page_title_widget.dart';
 import 'package:flutter/material.dart';
 
