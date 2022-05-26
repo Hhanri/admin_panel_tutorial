@@ -9,7 +9,7 @@ class NoCredentialsWidget extends StatelessWidget {
     return RichText(
       text: TextSpan(
         children: [
-          const TextSpan(text: "Don't have admin credentials?"),
+          const TextSpan(text: "Don't have admin credentials? "),
           TextSpan(text: "Request credentials!", style: TextStyle(color: active))
         ]
       ),
