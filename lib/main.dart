@@ -2,6 +2,7 @@ import 'package:admin_panel_tutorial/constants/theme.dart';
 import 'package:admin_panel_tutorial/controllers/menu_controller.dart';
 import 'package:admin_panel_tutorial/controllers/navigation_controller.dart';
 import 'package:admin_panel_tutorial/layout.dart';
+import 'package:admin_panel_tutorial/pages/authenticatiom/authentication.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Admin Panel',
       debugShowCheckedModeBanner: false,
       theme: theme(context: context),
-      home: const SiteLayout(),
+      home: const AuthenticationPage(),
     );
   }
 }

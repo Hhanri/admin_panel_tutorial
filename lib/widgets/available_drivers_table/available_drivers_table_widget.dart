@@ -46,7 +46,7 @@ class AvailableDriversTableWidget extends StatelessWidget {
                     DataCell(CustomTextWidget(text: driver.name)),
                     DataCell(CustomTextWidget(text: driver.location)),
                     DataCell(DisplayRatingWidget(rating: driver.rating,)),
-                    const DataCell(TableRowButtonWidget(title: "Available Delivery",)),
+                    const DataCell(TableRowButtonWidget(title: "Assign Delivery",)),
                   ]
                 );
               }
