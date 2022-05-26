@@ -1,7 +1,7 @@
 import 'package:admin_panel_tutorial/constants/data.dart';
 import 'package:admin_panel_tutorial/constants/style.dart';
 import 'package:admin_panel_tutorial/constants/theme.dart';
-import 'package:admin_panel_tutorial/pages/overview/widgets/available_drivers_table/table_row_tools.dart';
+import 'package:admin_panel_tutorial/widgets/available_drivers_table/table_row_tools.dart';
 import 'package:admin_panel_tutorial/widgets/custom_text_widget.dart';
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
@@ -39,14 +39,14 @@ class AvailableDriversTableWidget extends StatelessWidget {
               DataColumn(label: Text('Action')),
             ],
             rows: List<DataRow>.generate(
-              OverviewDriverDataModel.mockData.length, (index) {
-                final OverviewDriverDataModel driver = OverviewDriverDataModel.mockData[index];
+              DriverDataModel.mockData.length, (index) {
+                final DriverDataModel driver = DriverDataModel.mockData[index];
                 return DataRow(
                   cells: [
                     DataCell(CustomTextWidget(text: driver.name)),
                     DataCell(CustomTextWidget(text: driver.location)),
                     DataCell(DisplayRatingWidget(rating: driver.rating,)),
-                    const DataCell(AvailableDeliveryButtonWidget()),
+                    const DataCell(TableRowButtonWidget(title: "Available Delivery",)),
                   ]
                 );
               }

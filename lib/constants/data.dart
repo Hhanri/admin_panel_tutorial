@@ -36,22 +36,42 @@ class OverviewRevenueInfoDataModel {
   ];
 }
 
-class OverviewDriverDataModel {
+class DriverDataModel {
   final String name;
   final String location;
   final double rating;
 
-  OverviewDriverDataModel({
+  DriverDataModel({
     required this.name,
     required this.location,
     required this.rating
   });
 
-  static final List<OverviewDriverDataModel> mockData = [
-    OverviewDriverDataModel(name: "Hanri", location: "Paris", rating: 10),
-    OverviewDriverDataModel(name: "Bouba", location: "Paris", rating: 7),
-    OverviewDriverDataModel(name: "OusJames", location: "Paris", rating: 10),
-    OverviewDriverDataModel(name: "Ilies", location: "Paris", rating: 10),
-    OverviewDriverDataModel(name: "Houssem", location: "Paris", rating: 3.5),
+  static final List<DriverDataModel> mockData = [
+    DriverDataModel(name: "Hanri", location: "Paris", rating: 10),
+    DriverDataModel(name: "Bouba", location: "Paris", rating: 7),
+    DriverDataModel(name: "OusJames", location: "Paris", rating: 10),
+    DriverDataModel(name: "Ilies", location: "Paris", rating: 10),
+    DriverDataModel(name: "Houssem", location: "Paris", rating: 3.5),
+  ];
+}
+
+class ClientDataModel {
+  final String name;
+  final String location;
+  final double rating;
+
+  ClientDataModel({
+    required this.name,
+    required this.location,
+    required this.rating
+  });
+
+  static final List<DriverDataModel> mockData = [
+    DriverDataModel(name: "Hanri", location: "Paris", rating: 10),
+    DriverDataModel(name: "Bouba", location: "Paris", rating: 7),
+    DriverDataModel(name: "OusJames", location: "Paris", rating: 10),
+    DriverDataModel(name: "Ilies", location: "Paris", rating: 10),
+    DriverDataModel(name: "Houssem", location: "Paris", rating: 3.5),
   ];
 }

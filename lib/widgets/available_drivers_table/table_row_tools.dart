@@ -18,8 +18,9 @@ class DisplayRatingWidget extends StatelessWidget {
   }
 }
 
-class AvailableDeliveryButtonWidget extends StatelessWidget {
-  const AvailableDeliveryButtonWidget({Key? key}) : super(key: key);
+class TableRowButtonWidget extends StatelessWidget {
+  final String title;
+  const TableRowButtonWidget({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class AvailableDeliveryButtonWidget extends StatelessWidget {
       ),
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       child: CustomTextWidget(
-        text: "Available Delivery",
+        text: title,
         color: active.withOpacity(0.7),
         fontWeight: FontWeight.bold,
       ),
