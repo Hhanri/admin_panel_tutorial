@@ -5,6 +5,7 @@ import 'package:admin_panel_tutorial/pages/authenticatiom/widgets/remember_me_wi
 import 'package:admin_panel_tutorial/widgets/custom_text_widget.dart';
 import 'package:admin_panel_tutorial/widgets/text_field_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AuthenticationPage extends StatelessWidget {
@@ -12,57 +13,78 @@ class AuthenticationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Widget spacer = SizedBox(height: 15);
+    final formKey = GlobalKey<FormState>();
+    const Widget spacer = SizedBox(height: 15);
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
+
+    emailController.text = "";
+    passwordController.text = "";
     return Scaffold(
       body: Center(
         child: Container(
           constraints: const BoxConstraints(maxWidth: 400),
           padding: const EdgeInsets.all(24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 12),
-                    child: Image.asset("assets/logo/logo.png"),
-                  ),
-                  const Spacer()
-                ],
-              ),
-              const SizedBox(height: 30),
-              Text(
-                "Login",
-                style: GoogleFonts.roboto(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold
+          child: Form(
+            key: formKey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 12),
+                      child: Image.asset("assets/logo/logo.png"),
+                    ),
+                    const Spacer()
+                  ],
                 ),
-              ),
-              CustomTextWidget(text: "Welcome Back to the admin panel", color: lightGrey,),
-              spacer,
-              TextFieldWidget(
-                labelText: "eMail",
-                hintText: "your-email@gmail.com",
-                controller: emailController,
-                obscureText: false,
-              ),
-              spacer,
-              TextFieldWidget(
-                labelText: "password",
-                hintText: "Your Password",
-                controller: passwordController,
-                obscureText: true,
-              ),
-              spacer,
-              const RememberMeForgotPassWordWidget(),
-              spacer,
-              const LoginButtonWidget(),
-              spacer,
-              const NoCredentialsWidget()
-            ],
+                const SizedBox(height: 30),
+                Text(
+                  "Login",
+                  style: GoogleFonts.roboto(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                CustomTextWidget(text: "Welcome Back to the admin panel", color: lightGrey,),
+                spacer,
+                TextFieldWidget(
+                  labelText: "eMail",
+                  hintText: "your-email@gmail.com",
+                  controller: emailController,
+                  obscureText: false,
+                  validator: (value) {
+                    if (!value!.isEmail) {
+                      return "Not email format";
+                    }
+                    return null;
+                  },
+                ),
+                spacer,
+                TextFieldWidget(
+                  labelText: "password",
+                  hintText: "Your Password",
+                  controller: passwordController,
+                  obscureText: true,
+                  validator: (value) {
+                    if (!value!.isNotEmpty) {
+                      return "Please enter password";
+                    }
+                    return null;
+                  },
+                ),
+                spacer,
+                const RememberMeForgotPassWordWidget(),
+                spacer,
+                LoginButtonWidget(
+                  formKey: formKey,
+                ),
+                spacer,
+                const NoCredentialsWidget()
+              ],
+            ),
           ),
         ),
       ),

@@ -5,19 +5,22 @@ class TextFieldWidget extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
   final bool obscureText;
+  final FormFieldValidator<String>? validator;
   const TextFieldWidget({
     Key? key,
     required this.labelText,
     required this.hintText,
     required this.controller,
-    required this.obscureText
+    required this.obscureText,
+    required this.validator
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       obscureText: obscureText,
       controller: controller,
+      validator: validator,
       decoration: InputDecoration(
         labelText: labelText,
         hintText: hintText,

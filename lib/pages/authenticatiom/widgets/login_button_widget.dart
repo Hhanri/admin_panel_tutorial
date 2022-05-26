@@ -5,13 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class LoginButtonWidget extends StatelessWidget {
-  const LoginButtonWidget({Key? key}) : super(key: key);
+  final GlobalKey<FormState> formKey;
+  const LoginButtonWidget({Key? key, required this.formKey}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.offAll(() => const SiteLayout());
+        if (formKey.currentState!.validate()) {
+          Get.offAll(() => const SiteLayout());
+        }
       },
       child: Container(
         decoration: BoxDecoration(
