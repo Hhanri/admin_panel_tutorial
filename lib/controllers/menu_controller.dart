@@ -50,5 +50,4 @@ class MenuController extends GetxController {
       );
     }
   }
-
 }
