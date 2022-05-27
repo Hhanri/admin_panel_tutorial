@@ -1,5 +1,6 @@
 import 'package:admin_panel_tutorial/constants/style.dart';
 import 'package:admin_panel_tutorial/layout.dart';
+import 'package:admin_panel_tutorial/routing/routes.dart';
 import 'package:admin_panel_tutorial/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +14,7 @@ class LoginButtonWidget extends StatelessWidget {
     return InkWell(
       onTap: () {
         if (formKey.currentState!.validate()) {
-          Get.offAll(() => const SiteLayout());
+          Get.offAllNamed(rootRoute);
         }
       },
       child: Container(

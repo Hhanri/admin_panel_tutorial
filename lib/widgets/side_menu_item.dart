@@ -3,10 +3,10 @@ import 'package:admin_panel_tutorial/widgets/horizontal_menu_item.dart';
 import 'package:admin_panel_tutorial/widgets/vertical_menu_item.dart';
 import 'package:flutter/material.dart';
 
-class SideMenuItem extends StatelessWidget {
+class SideMenuItemWidget extends StatelessWidget {
   final String itemName;
   final VoidCallback onTap;
-  const SideMenuItem({
+  const SideMenuItemWidget({
     Key? key,
     required this.itemName,
     required this.onTap

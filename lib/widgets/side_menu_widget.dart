@@ -1,7 +1,6 @@
 import 'package:admin_panel_tutorial/constants/controllers.dart';
 import 'package:admin_panel_tutorial/constants/style.dart';
 import 'package:admin_panel_tutorial/helpers/responsiveness_widget.dart';
-import 'package:admin_panel_tutorial/pages/authenticatiom/authentication.dart';
 import 'package:admin_panel_tutorial/routing/routes.dart';
 import 'package:admin_panel_tutorial/widgets/custom_text_widget.dart';
 import 'package:admin_panel_tutorial/widgets/side_menu_item.dart';
@@ -49,19 +48,20 @@ class SideMenuWidget extends StatelessWidget {
             const SizedBox(height: 40),
             Divider(color: lightGrey.withOpacity(0.1)),
             Column(
-              children: sideMenuItems.map((itemName) {
-                return SideMenuItem(
-                  itemName: itemName == authenticationPageRoute ? "Log Out" : itemName,
+              children: SideMenuItemModel.sideMenuItems.map((item) {
+                return SideMenuItemWidget(
+                  itemName: item.name,
                   onTap: () {
-                    if (itemName == authenticationPageRoute) {
-                      Get.offAll(() => const AuthenticationPage());
+                    if (item.route == authenticationRoutePage) {
+                      menuController.changeActiveItemTo(overviewDisplayName);
+                      Get.offAllNamed(authenticationRoutePage);
                     }
-                    if (!menuController.isActive(itemName)) {
-                      menuController.changeActiveItemTo(itemName);
+                    if (!menuController.isActive(item.name)) {
+                      menuController.changeActiveItemTo(item.name);
                       if (ResponsivenessWidget.isSmallScreen(context)) {
                         Get.back();
                       }
-                      navigationController.navigateTo(itemName);
+                      navigationController.navigateTo(item.route);
                     }
                   }
                 );

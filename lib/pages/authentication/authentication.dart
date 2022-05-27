@@ -1,12 +1,13 @@
 import 'package:admin_panel_tutorial/constants/style.dart';
-import 'package:admin_panel_tutorial/pages/authenticatiom/widgets/login_button_widget.dart';
-import 'package:admin_panel_tutorial/pages/authenticatiom/widgets/no_credentials_widget.dart';
-import 'package:admin_panel_tutorial/pages/authenticatiom/widgets/remember_me_widget.dart';
+import 'package:admin_panel_tutorial/pages/authentication/widgets/login_button_widget.dart';
+import 'package:admin_panel_tutorial/pages/authentication/widgets/no_credentials_widget.dart';
+import 'package:admin_panel_tutorial/pages/authentication/widgets/remember_me_widget.dart';
 import 'package:admin_panel_tutorial/widgets/custom_text_widget.dart';
 import 'package:admin_panel_tutorial/widgets/text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 
 class AuthenticationPage extends StatelessWidget {
   const AuthenticationPage({Key? key}) : super(key: key);
