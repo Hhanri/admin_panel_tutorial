@@ -2,6 +2,7 @@ import 'package:admin_panel_tutorial/constants/style.dart';
 import 'package:admin_panel_tutorial/pages/authentication/widgets/login_button_widget.dart';
 import 'package:admin_panel_tutorial/pages/authentication/widgets/no_credentials_widget.dart';
 import 'package:admin_panel_tutorial/pages/authentication/widgets/remember_me_widget.dart';
+import 'package:admin_panel_tutorial/routing/routes.dart';
 import 'package:admin_panel_tutorial/widgets/custom_text_widget.dart';
 import 'package:admin_panel_tutorial/widgets/text_field_widget.dart';
 import 'package:flutter/material.dart';
@@ -52,6 +53,7 @@ class AuthenticationPage extends StatelessWidget {
                 CustomTextWidget(text: "Welcome Back to the admin panel", color: lightGrey,),
                 spacer,
                 TextFieldWidget(
+                  formKey: formKey,
                   labelText: "eMail",
                   hintText: "your-email@gmail.com",
                   controller: emailController,
@@ -65,6 +67,7 @@ class AuthenticationPage extends StatelessWidget {
                 ),
                 spacer,
                 TextFieldWidget(
+                  formKey: formKey,
                   labelText: "password",
                   hintText: "Your Password",
                   controller: passwordController,
